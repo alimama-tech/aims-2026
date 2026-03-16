@@ -87,6 +87,10 @@
                 grid-template-columns: repeat(6, 1fr);
             }
         }
+
+        /* Collapsible section: hide default details marker */
+        .collapsible-section summary::-webkit-details-marker { display: none; }
+        .collapsible-section summary::marker { content: none; }
     </style>
 </head>
 
@@ -119,6 +123,7 @@
                         <a href="#call" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">CFP</a>
                         <a href="#program" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">Schedule</a>
                         <a href="#accepted-papers" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">Accepted Papers</a>
+                        <a href="#program-committee" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">Program Committee</a>
                         <a href="#speaker" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">Speakers</a>
                         <a href="#organization" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">Organizers</a>
                         <a href="#Sponsor" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">Sponsors</a>
@@ -145,6 +150,7 @@
                 <a href="#call" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">Call for Papers</a>
                 <a href="#program" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">Schedule</a>
                 <a href="#accepted-papers" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">Accepted Papers</a>
+                <a href="#program-committee" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">Program Committee</a>
                 <a href="#speaker" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">Invited Speakers</a>
                 <a href="#organization" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">Organizers</a>
                 <a href="#Sponsor" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">Sponsors</a>
@@ -382,11 +388,15 @@
         </div>
     </section>
 
-    <!-- Accepted Papers Section -->
+    <!-- Accepted Papers Section (collapsible, collapsed by default) -->
     <section id="accepted-papers" class="section-container py-12">
         <div class="container mx-auto px-4 max-w-5xl">
-            <h2 class="text-3xl font-extrabold text-center text-[#2c5282] mb-8">Accepted Papers</h2>
-            <div class="space-y-4 text-gray-700">
+            <details class="collapsible-section">
+                <summary class="text-3xl font-extrabold text-center text-[#2c5282] mb-8 cursor-pointer list-none flex justify-center items-center gap-2 [&::-webkit-details-marker]:hidden">
+                    Accepted Papers
+                    <span class="text-lg text-gray-500 font-normal">(click to expand)</span>
+                </summary>
+            <div class="space-y-4 text-gray-700 mt-4">
                 <ul class="list-none space-y-4">
                     <!-- Each item: paper title + author list. Fill in below. -->
                     <li class="border-b border-gray-200 pb-3">
@@ -707,6 +717,152 @@
                     </li>
                 </ul>
             </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Program Committee Section (collapsible, collapsed by default) -->
+    <section id="program-committee" class="section-container py-12 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <details class="collapsible-section">
+                <summary class="text-3xl font-extrabold text-center text-[#2c5282] mb-8 cursor-pointer list-none flex justify-center items-center gap-2 [&::-webkit-details-marker]:hidden">
+                    Program Committee
+                    <span class="text-lg text-gray-500 font-normal">(click to expand)</span>
+                </summary>
+            <div class="text-gray-700 mt-4 text-center">
+                <p class="mb-2">We thank the following colleagues for their valuable service as program committee members and reviewers.</p>
+                <p class="mb-6 text-sm text-gray-500">The names are listed in alphabetical order.</p>
+                <div class="flex flex-wrap justify-center gap-x-3 gap-y-1 max-w-5xl mx-auto text-left">
+                    <span>Nurmyrat Amanmadov,</span>
+                    <span>Oluwatoni Akintola,</span>
+                    <span>André F Cruz,</span>
+                    <span>Bryan Cheng,</span>
+                    <span>Juan P. Madrigal Cianci,</span>
+                    <span>Lu Chen,</span>
+                    <span>Xiaowei Chen,</span>
+                    <span>Yatong Chen,</span>
+                    <span>Yuhan Cao,</span>
+                    <span>Yuwei Cheng,</span>
+                    <span>Huanzhang Dou,</span>
+                    <span>Jinren Ding,</span>
+                    <span>Ruomeng Ding,</span>
+                    <span>Yuejia Dou,</span>
+                    <span>Zhen Dong,</span>
+                    <span>Zhijian Duan,</span>
+                    <span>Tianhao Fu,</span>
+                    <span>Yiding Feng,</span>
+                    <span>Arnob Ghosh,</span>
+                    <span>Djordje Gligorijevic,</span>
+                    <span>Jingwei Guo,</span>
+                    <span>Yanru Guan,</span>
+                    <span>Jason Hartline,</span>
+                    <span>Lu Han,</span>
+                    <span>Meng Hou,</span>
+                    <span>Mingming Ha,</span>
+                    <span>Qun Hu,</span>
+                    <span>Zhengye Han,</span>
+                    <span>Harry Ilanyan,</span>
+                    <span>Prateek Jalan,</span>
+                    <span>Xiaochong Jiang,</span>
+                    <span>Yipeng Kang,</span>
+                    <span>Changjian Liu,</span>
+                    <span>Chenxi Li,</span>
+                    <span>Hanbing Liu,</span>
+                    <span>Hongtao Lv,</span>
+                    <span>Ningyuan Li,</span>
+                    <span>Ping Li,</span>
+                    <span>Ruohong Liu,</span>
+                    <span>Siwei Li,</span>
+                    <span>XueJian Li,</span>
+                    <span>Yangsu Liu,</span>
+                    <span>Yichen Liu,</span>
+                    <span>Zhai Lidong,</span>
+                    <span>Zhang Lvyang,</span>
+                    <span>Anurag Malik,</span>
+                    <span>Chennan Ma,</span>
+                    <span>Daniel Sadoc Menasche,</span>
+                    <span>Shentong Mo,</span>
+                    <span>Yi Ma,</span>
+                    <span>Yuchao Ma,</span>
+                    <span>Yunxuan Ma,</span>
+                    <span>Junwei Pan,</span>
+                    <span>Lehilton Lelis Chaves Pedrosa,</span>
+                    <span>Shang Qin,</span>
+                    <span>Gili Rusak,</span>
+                    <span>Mahule Roy,</span>
+                    <span>Sai Srivatsa Ravindranath,</span>
+                    <span>Subhas Roy,</span>
+                    <span>Vethavikashini Chithrra Raghuram,</span>
+                    <span>Alex Smolin,</span>
+                    <span>Johnathan Sun,</span>
+                    <span>Krishna Sharma,</span>
+                    <span>Manoj Saravanan,</span>
+                    <span>Meiqi Sun,</span>
+                    <span>Rohit Kumar Salla,</span>
+                    <span>Sheng-jie Sun,</span>
+                    <span>Thanawat Sornwanee,</span>
+                    <span>Wei Sheng,</span>
+                    <span>Bin Tong,</span>
+                    <span>Jiakai Tang,</span>
+                    <span>Jingjing Tang,</span>
+                    <span>Yifeng Teng,</span>
+                    <span>Yixin Tao,</span>
+                    <span>Anoushka Vyas,</span>
+                    <span>Raj Kiriti Velicheti,</span>
+                    <span>Venkatesh Velugubantla,</span>
+                    <span>Bingzhe Wang,</span>
+                    <span>Chenyang Wu,</span>
+                    <span>Lulu Wen,</span>
+                    <span>Mengmeng Wang,</span>
+                    <span>Steven Wang,</span>
+                    <span>Xingjian Wu,</span>
+                    <span>Zirui Wei,</span>
+                    <span>Zongqi Wan,</span>
+                    <span>Xuanzhi Xia,</span>
+                    <span>Yichong Xia,</span>
+                    <span>Yidan Xing,</span>
+                    <span>Yuwei Xu,</span>
+                    <span>Zhibo Xiao,</span>
+                    <span>Brandon Yee,</span>
+                    <span>Chunwei YANG,</span>
+                    <span>Fan Yao,</span>
+                    <span>Manoj Yadav,</span>
+                    <span>Tian-Le Yang,</span>
+                    <span>Wenting Yang,</span>
+                    <span>Xiang Yan,</span>
+                    <span>Yasuhiro Yoshida,</span>
+                    <span>Yeqiu Yang,</span>
+                    <span>Yifu Yuan,</span>
+                    <span>Yingxuan Yang,</span>
+                    <span>Yutong Yin,</span>
+                    <span>Boyang Zhou,</span>
+                    <span>Chujie Zhao,</span>
+                    <span>Dengji Zhao,</span>
+                    <span>Hanrui Zhang,</span>
+                    <span>Haodong Zhao,</span>
+                    <span>Hengyang Zhou,</span>
+                    <span>Jue Zhang,</span>
+                    <span>Liang Zhang,</span>
+                    <span>Muyang Zhao,</span>
+                    <span>Ruitao Zhu,</span>
+                    <span>Wenxuan Zhang,</span>
+                    <span>Yansen Zhang,</span>
+                    <span>Yu Zhu,</span>
+                    <span>Zhifei Zheng,</span>
+                    <span>2410196@tongji.edu.cn,</span>
+                    <span>boses@illinois.edu,</span>
+                    <span>chenyu.cw@alibaba-inc.com,</span>
+                    <span>cpuligun@asu.edu,</span>
+                    <span>dimin.wdm@alibaba-inc.com,</span>
+                    <span>huguangzheng2019@ia.ac.cn,</span>
+                    <span>krishjain@ucsb.edu,</span>
+                    <span>poojitha.vkl@gmail.com,</span>
+                    <span>ruiwang0630@gmail.com,</span>
+                    <span>tongbin.tb@alibaba-inc.com,</span>
+                    <span>wanying.he@alumni.schwarzmanscholars.org,</span>
+                </div>
+            </div>
+            </details>
         </div>
     </section>
 
